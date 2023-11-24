@@ -3,8 +3,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    width: 100%;
+    min-width: 320px;
     max-width: 1440px;
 }
 
@@ -14,14 +13,28 @@ main{
 }
 
 .main_info p {
-    font-size: 18px;
-    margin: 20px 0 28px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    color: white;
+      
 }
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .main_info div{
     display: flex;
     column-gap: 32px;
-
 }
 
 .main_info div a, .main_info div button{
@@ -51,5 +64,4 @@ main{
 .ass a button{
     background-color: red;
 }
-
 
